@@ -1,0 +1,170 @@
+body {
+  background-color: #F2F3F4;
+}
+
+h1 {
+  font-size: 400%;
+  filter: opacity(75%);
+}
+
+input {
+  height: 30px;
+  padding: 0;
+}
+
+#mainNav {
+  background-color: #30CBFF;
+}
+
+#navbarNavDropdown .navbar-toggler {
+  background-color: #30CBFF;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+#navbarNavDropdown .navbar-nav {
+  padding-left: 20%;
+  text-overflow: clip;
+}
+
+#navbarNavDropdown .nav-item {
+  padding-left: 0%;
+}
+
+#navbarNavDropdown .nav-link {
+  padding-left: 25px;
+  font-size: 100%;
+  filter: opacity(75%);
+}
+
+#mainNav .navbar-brand {
+  padding-left: 10%;
+  font-size: 200%;
+  font-weight: 600;
+  color: white;
+}
+
+nav
+
+#navbarNavDropdown .menu {
+  color: white;
+}
+
+.menu {
+  color: white;
+}
+
+.bg.scrolled {
+  background-color: white;
+}
+
+#front {
+  text-align: center;
+  background-color: #30CBFF;
+  padding: 18px 0 18px 0;
+}
+
+.author {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  background-color: #30CBFF;
+  text-align: center;
+  padding: 20px 0 4px 0;
+  font-size: 110%;
+}
+
+.btn {
+  margin: 0 6px 0 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.creator {
+  color: white;
+}
+
+#display {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 3% 5%;
+
+}
+
+#display h3 {
+  padding-top: 3%;
+  padding-left: 2.5rem;
+  font-size: 200%;
+  color: #30CBFF linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+}
+
+#display .table {
+  margin: 0 5% 2% 5%;
+  padding: 0;
+  border: 0;
+  position: relative;
+  font-size: 100%;
+  width: 90%;
+}
+
+.pic {
+  object-fit: contain;
+  width: 60rem;
+  position: relative;
+  margin: 0 5%;
+  padding: 2% 0 1% 0;
+}
+
+.card-body {
+  margin: 0 3%;
+  padding: 0;
+}
+
+.list-group {
+  margin: 0 3%;
+  padding: 0;
+  border: 0;
+}
+
+.input-group {
+  margin: 0% 5%;
+  width: 90%;
+  padding: 0;
+  border: 0;
+}
+
+.form-label {
+  font-size: 100%;
+  margin: 0;
+  margin-left: 5%;
+  padding: 0;
+  border: 0;
+}
+
+.form-check-input {
+  font-size: 50%;
+}
+
+.box {
+  background-color: white;
+  border-style: hidden;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+
+.img-fluid {
+  margin: 0% 5%;
+  padding: 0;
+  border: 0;
+  max-width: 100%;
+}
+
+.run_button {
+  margin: 2% 5%;
+  border-radius: 10%;
+  height: 30px;
+
+
+
+}

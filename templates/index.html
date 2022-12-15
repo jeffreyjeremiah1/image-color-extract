@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="'en'">
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- bootstrap link -->
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+
+  <!-- CSS link -->
+  <link href="static/styles.css" rel="stylesheet">
+
+  <!-- custom fonts -->
+  <link href="static/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg.scrolled bgcolor" id="mainNav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cool PHP Tools</a>
+      <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));"
+        type="button">
+        <!-- <span class="navbar-toggler-icon bg-dark"></span> -->
+        <i class="fa-solid fa-bars menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-fill">
+            <a aria-current="page" class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item nav-fill">
+            <a class="nav-link" href="#">Dynamic css</a>
+          </li>
+          <li class="nav-item nav-fill">
+            <a class="nav-link " href="#">Ci + smarty</a>
+          </li>
+          <li class="nav-item nav-fill">
+            <a class="nav-link" href="#" style="color: white;">color extract</a>
+          </li>
+          <li class="nav-item nav-fill">
+            <a class="nav-link" href="#">Base64</a>
+          </li>
+          <li class="nav-item nav-fill">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</head>
+
+<body>
+
+  <!-- header display -->
+  <section>
+    <div class="overlay"></div>
+    <div class="container-fluid" id="front">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Image Color Extract</h1>
+            <a class="btn btn-warning btn-lg mt-3 mb-3 col-12-md d-block d-md-inline-block" href="" type="button">DEMO</a>
+            <a class="btn btn-dark btn-lg mt-3 mb-3 col-12-md d-block d-md-inline-block" href="" type="button">DOWNLOAD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="author">
+      <p><span class="creator">Created by:</span> Jeffrey Jeremiah <span class="creator">at</span> his house.</p>
+    </div>
+  </section>
+
+  <!-- large card display -->
+  <section>
+    <div class="container" id="display">
+      <div class="card box" style="width: 50rem;">
+        <h3 class="">Demo</h3>
+            <img alt="image" class="img-fluid col-xs-12" src="{{ file }}" style="height: 35rem; width: 90%">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Color</th>
+                  <th scope="col">Color Code</th>
+                  <th scope="col">Percentage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in colors: %}
+                  {% set item_1 = colors[loop.index-0] %}
+                  {% set item_1 = percentage[loop.index-1] %}
+                  <tr>
+                    <th scope="row" style="background-color: {{ i }};"></th>
+                    <td>{{ i }}</td>
+                    <td>{{ item_1 }}</td>
+                  </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+
+            <form class="{{ url_for('home') }}" enctype = "multipart/form-data" method="post">
+              <label class="form-label">File to upload:</label>
+              <div class="input-group">
+                <input aria-describedby="inputGroupFileAddon04" aria-label="Upload" class="form-control" id="inputGroupFile04" name="files" type="file">
+              </div>
+
+              <label class="form-label">Number of colors:</label>
+              <div class="input-group">
+                <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="num_colors" placeholder="10" type="text">
+              </div>
+
+              <label class="form-label">delta:</label>
+              <div class="input-group">
+                <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="fdelta" placeholder="24" type="text">
+              </div>
+
+              <div class="">
+               <label class="form-label">Reduce Brightness:</label>
+                <div class="input-group">
+                  <span class="">Yes</span>
+                  <input aria-label="Radio button for following text input" class="me-1" name="radio_yes" type="radio" value="">
+                  <span class="ms-1">No</span>
+                  <input aria-label="Radio button for following text input"  class="Ps-1" name="radio_no" type="radio" value="">
+                </div>
+              <button class="run_button" name="run" role="button" type="submit">Run</button>
+              </div>
+            </form>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+
+  </script>
+
+{% endblock %}
+
+</body>
+
+</html>
